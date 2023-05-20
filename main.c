@@ -6,7 +6,7 @@
 /*   By: mkatfi <mkatfi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/14 16:35:43 by mkatfi            #+#    #+#             */
-/*   Updated: 2023/05/20 18:47:34 by mkatfi           ###   ########.fr       */
+/*   Updated: 2023/05/20 18:52:28 by mkatfi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	lunch(t_for *ph)
 	pthread_mutex_lock(ph->next->check_time);
 	ph->last_eat = get_time();
 	pthread_mutex_unlock(ph->next->check_time);
+	
 }
 
 void	*routine(void *arg)
